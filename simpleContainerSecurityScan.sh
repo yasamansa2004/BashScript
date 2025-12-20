@@ -46,3 +46,10 @@ sudo find "$TMPDIR" -type f -executable -exec file {} \; \
   | grep -c ELF
 
 sudo rm -rf "$TMPDI
+
+
+
+
+
+
+note: You must install jq and trivy before you run the script.
