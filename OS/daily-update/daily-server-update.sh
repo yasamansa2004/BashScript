@@ -14,7 +14,7 @@ LOG_FILE="/var/log/daily-server-update.log"
 
     echo
     echo "=== PACKAGE UPGRADE ==="
-    DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+    DEBIAN_FRONTEND=noninteractive apt-get full-upgrade -y
 
     echo
     echo "=== AUTOREMOVE ==="
