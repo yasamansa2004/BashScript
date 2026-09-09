@@ -14,7 +14,7 @@ if id "$username" &>/dev/null; then
     exit 1
 fi
 
-useradd -m -s /bin/bash -G sudo "$username"
+useradd -m -s /bin/bash -G sudo,docker "$username"
 
 if [[ $? -ne 0 ]]; then
     echo "Failed to create user."
@@ -23,4 +23,4 @@ fi
 
 echo "$username:$password" | chpasswd
 
-echo "User '$username' has been added with sudo privileges."
+echo "User '$username' has been added with sudo and docker privileges."
